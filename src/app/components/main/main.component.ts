@@ -6,6 +6,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import {MatSort, Sort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { Observable } from 'rxjs';
+import { SnackbarService } from '../../services/snackbar.service';
 
 @Component({
   selector: 'app-main',
@@ -21,7 +22,8 @@ export class MainComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private _dialog: MatDialog, 
-              private _empService: MovieService){}
+              private _empService: MovieService,
+              private _snackBarService: SnackbarService){}
 
   ngOnInit(): void {
     this.getMovieList();
@@ -62,7 +64,7 @@ export class MainComponent implements OnInit {
   deleteMovie(id: number){
     this._empService.deleteMovie(id).subscribe({
       next: (res) => {
-        alert('Movie deleted successfully');
+        this._snackBarService.openSnackBar('Movie deleted successfully', 'Done');
         this.getMovieList();
       },
       error: console.log,

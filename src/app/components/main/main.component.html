@@ -1,17 +1,19 @@
 <section>
     <div class="example-button-row">
-    <button mat-raised-button (click)="openAddMovieForm()">
-        Add movie
-    </button>
+
     </div>  
 </section>
 
 <div class="main-body">
-    
+    <div class="row">
     <mat-form-field>
         <mat-label>Search</mat-label>
         <input matInput (keyup)="applyFilter($event)" #input>
     </mat-form-field>
+    <button mat-raised-button (click)="openAddMovieForm()" class="add-movie">
+        Add movie
+    </button>
+    </div>
 
     <div class="table-container">
 

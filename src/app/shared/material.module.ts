@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   imports: [
@@ -34,8 +35,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatSelectModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSortModule
-
+    MatSortModule,
+    MatSnackBarModule
 
   ],
   exports:[
@@ -54,8 +55,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatSelectModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSortModule
-
+    MatSortModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule {}

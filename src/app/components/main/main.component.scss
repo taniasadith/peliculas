@@ -2,7 +2,20 @@
     padding-top: 20px;
     margin:0 auto;
     max-width: 1248px;
+    
     mat-form-field{
-        width: 100%
+        width: 20%;
+        
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        
+    }
+
+    .add-movie{
+        background-color: #FFAD00;
     }
 }

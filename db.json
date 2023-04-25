@@ -11,14 +11,8 @@
   },
   "movie": [
     {
-      "id": "23",
-      "movie": "ssf",
-      "duration": "123",
-      "genres": "Suspense"
-    },
-    {
       "id": "12",
-      "movie": "yasmin",
+      "movie": "Tania",
       "duration": "18",
       "genres": "Suspense"
     }

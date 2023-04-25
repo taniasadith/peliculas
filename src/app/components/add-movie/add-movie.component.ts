@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { SnackbarService } from 'src/app/services/snackbar.service';
 
 interface Genre {
   id: string;
@@ -27,7 +28,8 @@ export class AddMovieComponent implements OnInit{
     private _fb: FormBuilder, 
     private _empService: MovieService,
     private _dialogRef: MatDialogRef<AddMovieComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBarService: SnackbarService
     ) {
     this.empMovieForm = this._fb.group({
       id: '',
@@ -47,7 +49,7 @@ export class AddMovieComponent implements OnInit{
       if(this.data){
         this._empService.updateMovie(this.data.id, this.empMovieForm.value).subscribe({
           next: (val: any) => {
-              alert('Movie detail updated!');
+              this._snackBarService.openSnackBar('Movie detail updated!', 'Done');
               this._dialogRef.close(true);
           },
           error: (err: any) => {
@@ -57,7 +59,7 @@ export class AddMovieComponent implements OnInit{
       }else {
         this._empService.addMovie(this.empMovieForm.value).subscribe({
           next: (val: any) => {
-              alert('Movie added successfully');
+              this._snackBarService.openSnackBar('Movie added successfully', 'Done');
               this._dialogRef.close(true);
           },
           error: (err: any) => {
