@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
-import { DialogRef } from '@angular/cdk/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 interface Genre {
   id: string;
@@ -13,7 +13,7 @@ interface Genre {
   templateUrl: './add-movie.component.html',
   styleUrls: ['./add-movie.component.scss']
 })
-export class AddMovieComponent {
+export class AddMovieComponent implements OnInit{
 
   empMovieForm: FormGroup;
 
@@ -26,7 +26,8 @@ export class AddMovieComponent {
   constructor(
     private _fb: FormBuilder, 
     private _empService: MovieService,
-    private _dialogRef: DialogRef<AddMovieComponent>
+    private _dialogRef: MatDialogRef<AddMovieComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
     ) {
     this.empMovieForm = this._fb.group({
       id: '',
@@ -36,18 +37,34 @@ export class AddMovieComponent {
     })
   }
 
+  ngOnInit(): void {
+    this.empMovieForm.patchValue(this.data)
+  }
+
   onFormSubmit(){
     if(this.empMovieForm.valid){
       //console.log(this.empMovieForm.value);
-      this._empService.addMovie(this.empMovieForm.value).subscribe({
-        next: (val: any) => {
-            alert('Movie added successfully');
-            this._dialogRef.close();
-        },
-        error: (err: any) => {
-          console.error(err);
-        }
-      })
+      if(this.data){
+        this._empService.updateMovie(this.data.id, this.empMovieForm.value).subscribe({
+          next: (val: any) => {
+              alert('Movie detail updated!');
+              this._dialogRef.close(true);
+          },
+          error: (err: any) => {
+            console.error(err);
+          }
+        })
+      }else {
+        this._empService.addMovie(this.empMovieForm.value).subscribe({
+          next: (val: any) => {
+              alert('Movie added successfully');
+              this._dialogRef.close(true);
+          },
+          error: (err: any) => {
+            console.error(err);
+          }
+        })
+      }
     }
   }
 }

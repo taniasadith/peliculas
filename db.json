@@ -11,16 +11,16 @@
   },
   "movie": [
     {
-      "id": "dsd",
-      "movie": "sd",
-      "duration": "sd",
+      "id": "23",
+      "movie": "ssf",
+      "duration": "123",
       "genres": "Suspense"
     },
     {
-      "id": "23",
-      "movie": "BTS",
-      "duration": "120",
-      "genres": "Action"
+      "id": "12",
+      "movie": "yasmin",
+      "duration": "18",
+      "genres": "Suspense"
     }
   ]
 }

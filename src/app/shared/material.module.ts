@@ -15,7 +15,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   imports: [
@@ -33,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     MatSelectModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSortModule
+
 
   ],
   exports:[
@@ -51,7 +53,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     MatSelectModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSortModule
+
   ]
 })
 export class MaterialModule {}

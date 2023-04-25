@@ -9,12 +9,13 @@ import { MaterialModule } from './shared/material.module';
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { MainComponent } from './components/main/main.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AddMovieComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,
