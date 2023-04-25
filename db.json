@@ -1,0 +1,26 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "movie": [
+    {
+      "id": "dsd",
+      "movie": "sd",
+      "duration": "sd",
+      "genres": "Suspense"
+    },
+    {
+      "id": "23",
+      "movie": "BTS",
+      "duration": "120",
+      "genres": "Action"
+    }
+  ]
+}
