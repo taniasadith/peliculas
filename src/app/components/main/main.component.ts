@@ -15,7 +15,7 @@ import { SnackbarService } from '../../services/snackbar.service';
 })
 export class MainComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'movie', 'duration', 'genres','action'];
+  displayedColumns: string[] = ['id', 'movie','image', 'duration', 'genres','action'];
   dataSource = new MatTableDataSource<any>;
 
   @ViewChild(MatSort) sort!: MatSort;

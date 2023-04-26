@@ -22,6 +22,9 @@ export class AddMovieComponent implements OnInit{
     {id: 'G-1', value: 'Suspense'},
     {id: 'G-2', value: 'Action'},
     {id: 'G-3', value: 'Drama'},
+    {id: 'G-4', value: 'Anime'},
+    {id: 'G-5', value: 'Thriller'},
+    {id: 'G-6', value: 'Romance'},
   ];
 
   constructor(
@@ -34,6 +37,7 @@ export class AddMovieComponent implements OnInit{
     this.empMovieForm = this._fb.group({
       id: '',
       movie: '',
+      image: '',
       duration: '',
       genres: '',
     })

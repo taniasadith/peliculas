@@ -13,26 +13,37 @@
     {
       "id": "1",
       "movie": "Spiderman",
+      "image": "https://cdn.marvel.com/content/1x/spidermannwh_hardcover.jpg",
       "duration": "120",
       "genres": "Action"
     },
     {
       "id": "2",
       "movie": "Mario Bros",
+      "image": "https://www.universalpictures-latam.com/tl_files/content/movies/super_mario_bros/posters/07.jpg",
       "duration": "140",
       "genres": "Action"
     },
     {
       "id": "3",
       "movie": "Fragmentado",
+      "image": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/629283.jpg",
       "duration": "145",
       "genres": "Suspense"
     },
     {
+      "id": "5",
+      "movie": "The whale",
+      "image": "https://www.passline.com/imagenes/eventos/the-whale-la-ballena-centro-arte-alameda-sala-ceina-167203-img.jpg",
+      "duration": "01:20",
+      "genres": "Drama"
+    },
+    {
       "id": "4",
       "movie": "Suzume",
-      "duration": "145",
-      "genres": "Drama"
+      "image": "https://imgmedia.larepublica.pe/640x906/larepublica/migration/images/63DEX3ET4RD5HN7ZBF7PEQ3H3I.webp",
+      "duration": "01:45",
+      "genres": "Anime"
     }
   ]
 }
