@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -36,8 +37,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ReactiveFormsModule,
     HttpClientModule,
     MatSortModule,
-    MatSnackBarModule
-
+    MatSnackBarModule,
+    RouterModule
   ],
   exports:[
     BrowserAnimationsModule,
@@ -56,7 +57,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ReactiveFormsModule,
     HttpClientModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule
   ]
 })
 export class MaterialModule {}

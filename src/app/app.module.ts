@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MaterialModule } from './shared/material.module';
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { MainComponent } from './components/main/main.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { MainComponent } from './components/main/main.component';
     HeaderComponent,
     AddMovieComponent,
     MainComponent,
+    LandingPageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

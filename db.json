@@ -11,10 +11,28 @@
   },
   "movie": [
     {
-      "id": "12",
-      "movie": "Tania",
-      "duration": "18",
+      "id": "1",
+      "movie": "Spiderman",
+      "duration": "120",
+      "genres": "Action"
+    },
+    {
+      "id": "2",
+      "movie": "Mario Bros",
+      "duration": "140",
+      "genres": "Action"
+    },
+    {
+      "id": "3",
+      "movie": "Fragmentado",
+      "duration": "145",
       "genres": "Suspense"
+    },
+    {
+      "id": "4",
+      "movie": "Suzume",
+      "duration": "145",
+      "genres": "Drama"
     }
   ]
 }
